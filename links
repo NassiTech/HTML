@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Links</title>
+    <meta charset="utf-8" />
+
+</head>
+
+<body>
+    <h1><b>Favorite links</b></h1>
+        <ul>
+        <li> <a href = "https://www.google.com"> Google</a> </li>
+        <li><a href = "https://www.deepl.de"> DeepL</a> </li>
+        <li> <a href = "https://www.yahoo.fr"> Yahoo</a> </li>
+        <li><a href = "https://www.sportschau.de"> Sportschau</a></li>
+    </ul>
+       
+</body
+
+</html>

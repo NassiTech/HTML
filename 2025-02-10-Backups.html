@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup FAQ</title>
+</head>
+
+<body>
+    <h1>Backup FAQ</h1>
+
+    <h2>1. What are Backups?</h2>
+    <p><strong>Backups</strong> are <em>copies of data</em> that are stored separately from the original data to protect
+        against <u>loss, corruption, or deletion</u>. They can be used to restore data in case of hardware failure,
+        accidental deletion, or cyberattacks.</p>
+
+    <h2>2. Why Should You Create Backups?</h2>
+    <p>Creating backups is essential for various reasons:</p>
+    <ul>
+        <li><strong>Data Security:</strong> Protect against unexpected data loss.</li>
+        <li><em>Business Continuity:</em> Ensure operations continue smoothly in case of emergencies.</li>
+        <li><u>Recovery:</u> Restore important files after accidental deletion or corruption.</li>
+    </ul>
+    <p>Learn more about the importance of backups on <a href="https://www.nist.gov/" target="_blank">NIST's official
+            website</a>.</p>
+
+    <h2>3. What Does This Code Do?</h2>
+    <p>Below is a Python script that performs a backup operation:</p>
+    <pre>
+import shutil
+import datetime
+
+backup_source = "C:/Users/Benutzer/Dokumente"
+backup_target = "D:/Backup_" + datetime.datetime.now().strftime("%Y%m%d%H%M")
+
+shutil.copytree(backup_source, backup_target)
+print(f"Backup erfolgreich: {backup_target}")
+    </pre>
+
+    <p>The code performs the following steps:</p>
+    <ol>
+        <li>Imports the required libraries (<strong>shutil</strong> for file operations and <strong>datetime</strong>
+            for timestamps).</li>
+        <li>Defines the source folder to back up and generates a target folder name based on the current date and time.
+        </li>
+        <li>Copies the entire folder from the source location to the target location using <em>shutil.copytree</em>.
+        </li>
+        <li>Prints a confirmation message with the backup location once the operation is complete.</li>
+    </ol>
+
+    <h2>4. Is There a Way to Automatically Run a Script Repeatedly?</h2>
+    <p>Yes, you can schedule a script to run automatically, for example, daily at 2 AM, using scheduling tools:</p>
+    <ul>
+        <li><strong>Windows:</strong> Use <a
+                href="https://learn.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page"
+                target="_blank">Task Scheduler</a> to schedule scripts.</li>
+        <li><em>Linux/Mac:</em> Use <u>cron jobs</u> to define a schedule.</li>
+    </ul>
+
+    <p>By automating scripts, you can set up periodic backups without manual intervention, ensuring your data is
+        consistently protected.</p>
+</body>
+
+</html>
